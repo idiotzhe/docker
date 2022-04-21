@@ -35,5 +35,5 @@ app.listen(PORT, ()=>{
 })
 app.get("/", async (req,res)=>{
 	// await stud.save();
-	res.send('One entry added')
+	res.send('One entry adddded')
 })
