@@ -1,21 +1,13 @@
 version: '3.8'
 services:
-  app:
-      container_name: app
-      restart: always
-      build: .
-      ports:
-        - "4000:4000"
-      links:
-        - mongo
-  mongodb:
-    image: mongo:latest # use the latest image.
-    container_name: mongodb
-    restart: unless-stopped
-    environment: # set required env variables to access mongo
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: password
+  nodeserver:
+    build:
+      context: .
     ports:
-      - 27017:27017
-    volumes: # optional to preserve database after container is deleted.
-      - ./database-data:/data/db
+      - "8080:8080"
+  nginx:
+      build:
+        context: ./nginx
+      container_name: nginx
+      ports:
+        - "80:80"
