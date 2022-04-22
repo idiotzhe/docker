@@ -3,11 +3,3 @@ services:
   nodeserver:
     build:
       context: .
-    ports:
-      - "8080:8080"
-  nginx:
-      build:
-        context: ./nginx
-      container_name: nginx
-      ports:
-        - "80:80"
