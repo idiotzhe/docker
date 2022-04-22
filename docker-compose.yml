@@ -3,5 +3,3 @@ services:
   nodeserver:
     build:
       context: .
-    ports:
-      - "80:80"
