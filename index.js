@@ -276,6 +276,6 @@ let job = schedule.scheduleJob(rule, async () => {
 	// await removeUpperAndVideo()
 	// await insertVideoInfo()
 	// await insertVideoStatistics()
-    await sleep(4000);
-	console.log('1');
+    // await sleep(4000);
+	// console.log('1');
 });
